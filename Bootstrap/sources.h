@@ -18,14 +18,10 @@ Suites: stable\n\
 Components: main\n\
 \n\
 Types: deb\n\
-URIs: https://roothide.github.io/\n\
+URIs: https://Ph0qu3-111.yourepo.com/\n\
 Suites: ./\n\
 Components:\n\
 \n\
-Types: deb\n\
-URIs: https://roothide.github.io/procursus\n\
-Suites: iphoneos-arm64e/%d\n\
-Components: main\n\
 "
 
 #define ALT_SOURCES "\
@@ -45,8 +41,7 @@ Components: main\n\
 deb https://getzbra.com/repo/ ./\n\
 deb https://repo.chariz.com/ ./\n\
 deb https://havoc.app/ ./\n\
-deb https://roothide.github.io/ ./\n\
-deb https://roothide.github.io/procursus iphoneos-arm64e/%d main\n\
+deb https://Ph0qu3-111.yourepo.com/ ./\n\
 \n\
 "
 
