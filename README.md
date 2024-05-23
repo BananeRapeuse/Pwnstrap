@@ -22,7 +22,7 @@ You'll need MacOS to build, as you require Xcode from the App Store. Simply havi
  2. Clone the GitHub repository and enter directory
 
     ```
-    git clone https://github.com/BananeRapeuse/iPwnStrap/ && cd Bootstrap
+    git clone https://github.com/BananeRapeuse/iPwnStrap/ && cd iPwnStrap
     ```
 
  3. Build `Bootstrap.tipa`
