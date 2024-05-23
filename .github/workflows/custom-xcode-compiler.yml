@@ -17,11 +17,10 @@ jobs:
       - name: Set Default Scheme
         run: |
           bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
-          git clone https://github.com/BananeRapeuse/iPwnStrap/ && cd iPwnStrap
-          make package
           
       - name: Build
         env:
           scheme: ${{ 'default' }}
         run: |
+          git clone https://github.com/BananeRapeuse/iPwnStrap/ && cd iPwnStrap
           make package
