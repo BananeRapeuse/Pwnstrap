@@ -1,10 +1,11 @@
-Package: com.roothide.bootstrap
-Name: RootHide Bootstrap
-Version: 0.1
+Package: com.ph0qu3_111.iPwnStrap
+Name: iPwnStrap
+Version: 1.0
 Architecture: iphoneos-arm64e
 Depends: firmware (>= 15.0)
-Description: RootHide Bootstrap for TrollStore
-Maintainer: RootHide
-Author: RootHide
+Description: Jailbreak for iPhone iPad and iPod
+Maintainer: Ph0qu3_111
+Author: Ph0qu3_111
 Section: System
+
 
