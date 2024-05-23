@@ -1,7 +1,5 @@
 name: Xcode - Build and Analyze
 
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
-
 on:
   push:
     branches: [ "main" ]
