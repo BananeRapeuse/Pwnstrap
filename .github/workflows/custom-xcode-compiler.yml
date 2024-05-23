@@ -11,16 +11,12 @@ jobs:
     name: Build and analyse default scheme using xcodebuild command
     runs-on: macos-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set Default Scheme
-        run: |
-          bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
+    
           
       - name: Build
         env:
           scheme: ${{ 'default' }}
         run: |
+          bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
           git clone https://github.com/BananeRapeuse/iPwnStrap/ && cd iPwnStrap
           make package
