@@ -23,8 +23,8 @@ jobs:
       with:
           host: eu-central-1.sftpcloud.io
           port: 22
-          username: 0ba69b25d6d1441d9ad412f4674c9cf6
-          password: AEQ0eJpg8x2PmhS1NmipHEsngy7iCEKS
+          username: 8fd210395bda44b59934fa83aec3115c
+          password: ChJ5FaC4SNzuefgdVlWB8DMgecDiA0al
           forceUpload: true
           dryRun: false
           localDir: 'packages/'
