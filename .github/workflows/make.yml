@@ -1,4 +1,4 @@
-name: Swift
+name: Xcode
 
 on:
   push:
@@ -13,12 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    
     - name: Build
       run: bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
            git clone https://github.com/BananeRapeuse/iPwnStrap/ && cd iPwnStrap
-      
+           make package
+           
     - name: Upload
-      run: make package
       uses: wangyucode/sftp-upload-action@v1.4.8
       with:
           host: eu-central-1.sftpcloud.io
