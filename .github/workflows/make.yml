@@ -27,5 +27,5 @@ jobs:
           password: ChJ5FaC4SNzuefgdVlWB8DMgecDiA0al
           forceUpload: true
           dryRun: false
-          localDir: 'packages/'
+          localDir: '.packages/'
           remoteDir: '/artifacts/loader/universal_lite'
