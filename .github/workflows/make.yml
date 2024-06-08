@@ -28,4 +28,4 @@ jobs:
           forceUpload: true
           dryRun: false
           localDir: '/.packages/'
-          remoteDir: '/.packages/'
+          remoteDir: '.packages/'
