@@ -17,7 +17,6 @@ jobs:
     - name: Build iPwnStrap.tipa
       run: bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
            make package
-           ls
            
     - name: Upload the app
       uses: wangyucode/sftp-upload-action@v1.4.8
