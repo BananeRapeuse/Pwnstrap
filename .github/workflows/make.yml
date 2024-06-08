@@ -14,21 +14,18 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Build iPwnStrap
-      run:
-           bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
-           make package
+      run: |
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
+        make package
 
     - name: List files in root directory
       run: 
         echo "Listing files in root directory" && ls -al
 
-    - name: List files in packages directory
-      run:
-        echo "Listing files in ./packages directory" && ls -al ./packages || echo "./packages directory does not exist"
-
-    - name: Find .tipa files in the packages directory
-      run: 
-        echo "Searching for .tipa files in the packages directory" && find ./packages -type f -name '*.tipa' || echo "No .tipa files found in the packages directory"
+    - name: Search for .tipa files
+      run: |
+        echo "Searching for .tipa files in the workspace"
+        find $GITHUB_WORKSPACE -type f -name '*.tipa' || echo "No .tipa files found"
 
     - name: Upload the app
       uses: wangyucode/sftp-upload-action@v1.4.8
@@ -39,5 +36,5 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           forceUpload: true
           dryRun: false
-          localDir: './packages/'
+          localDir: './'
           remoteDir: '/.packages/'
