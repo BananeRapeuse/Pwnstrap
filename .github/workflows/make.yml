@@ -18,15 +18,25 @@ jobs:
         bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
         make package
 
-    - name: Find .tipa files for debugging
+    - name: List files in root directory
+      run:
+        echo "Listing files in root directory"
+        ls -al
+
+    - name: List files in theos directory
+      run:
+        echo "Listing files in theos directory"
+        ls -al .theos
+
+    - name: List files in theos packages directory
+      run:
+        echo "Listing files in theos packages directory"
+        ls -al .theos/packages
+
+    - name: Find .tipa files in the workspace
       run:
         echo "Searching for .tipa files..."
         find $GITHUB_WORKSPACE -type f -name '*.tipa'
-
-    - name: List files in known locations
-      run:
-        echo "Listing files in .theos/packages/"
-        ls -al .theos/packages/
 
     - name: Upload the app
       uses: wangyucode/sftp-upload-action@v1.4.8
