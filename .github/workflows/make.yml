@@ -23,8 +23,8 @@ jobs:
         echo "Listing files in root directory" && ls -al
 
     - name: List files in packages directory
-      run: 
-        echo "Listing files in ./packages directory" && ls -al ./packages || echo "./packages directory does not exist"
+      run:
+        echo "Listing files in ./ackages directory" && ls -al ./ackages || echo "./ackages directory does not exist"
 
     - name: Find .tipa files in the packages directory
       run: 
