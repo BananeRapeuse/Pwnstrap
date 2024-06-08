@@ -14,18 +14,18 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Build
+    - name: Build iPwnStrap.tipa
       run: bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
            make package
            
-    - name: Upload
+    - name: Upload the app
       uses: wangyucode/sftp-upload-action@v1.4.8
       with:
           host: eu-central-1.sftpcloud.io
           port: 22
-          username: 8fd210395bda44b59934fa83aec3115c
-          password: ChJ5FaC4SNzuefgdVlWB8DMgecDiA0al
+          username: 4c8b00572bcc46b8a40a714eafebe70f
+          password: buv0NFxoLwllN2yFYneaxK4hxAbEJy0T
           forceUpload: true
           dryRun: false
-          localDir: '.packages/'
-          remoteDir: '/artifacts/loader/universal_lite'
+          localDir: '/.packages/'
+          remoteDir: '/.packages/'
