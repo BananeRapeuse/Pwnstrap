@@ -27,5 +27,3 @@ jobs:
           password: buv0NFxoLwllN2yFYneaxK4hxAbEJy0T
           forceUpload: true
           dryRun: false
-          localDir: '/.packages/'
-          remoteDir: '.packages/'
