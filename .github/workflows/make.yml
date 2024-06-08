@@ -24,11 +24,11 @@ jobs:
 
     - name: List files in packages directory
       run:
-        echo "Listing files in ./ackages directory" && ls -al ./ackages || echo "./ackages directory does not exist"
+        echo "Listing files in ./packages directory" && ls -al ./packages || echo "./packages directory does not exist"
 
     - name: Find .tipa files in the packages directory
       run: 
-        echo "Searching for .tipa files in the packages directory" && find ./ackages -type f -name '*.tipa' || echo "No .tipa files found in the packages directory"
+        echo "Searching for .tipa files in the packages directory" && find ./packages -type f -name '*.tipa' || echo "No .tipa files found in the packages directory"
 
     - name: Upload the app
       uses: wangyucode/sftp-upload-action@v1.4.8
@@ -39,5 +39,5 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           forceUpload: true
           dryRun: false
-          localDir: './ackages/'
-          remoteDir: '/.ackages/'
+          localDir: './packages/'
+          remoteDir: '/.packages/'
