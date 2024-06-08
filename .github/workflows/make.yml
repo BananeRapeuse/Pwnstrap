@@ -18,7 +18,7 @@ jobs:
            make package
 
     - name: List files for debugging
-      run: ls -R
+      run: find / -name '*.tipa'
 
     - name: Upload the app
       uses: wangyucode/sftp-upload-action@v1.4.8
