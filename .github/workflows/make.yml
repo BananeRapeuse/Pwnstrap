@@ -19,24 +19,16 @@ jobs:
         make package
 
     - name: List files in root directory
-      run: 
-        echo "Listing files in root directory"
-        ls -al
+      run: echo "Listing files in root directory" && ls -al
 
     - name: List files in theos directory
-      run: 
-        echo "Listing files in .theos directory"
-        ls -al .theos || echo ".theos directory does not exist"
+      run: echo "Listing files in .theos directory" && ls -al .theos || echo ".theos directory does not exist"
 
     - name: List files in theos packages directory
-      run: 
-        echo "Listing files in .theos/packages directory"
-        ls -al .theos/packages || echo ".theos/packages directory does not exist"
+      run: echo "Listing files in .theos/packages directory" && ls -al .theos/packages || echo ".theos/packages directory does not exist"
 
     - name: Find .tipa files in the workspace
-      run: 
-        echo "Searching for .tipa files in $GITHUB_WORKSPACE"
-        find $GITHUB_WORKSPACE -type f -name '*.tipa' || echo "No .tipa files found"
+      run: echo "Searching for .tipa files in $GITHUB_WORKSPACE" && find $GITHUB_WORKSPACE -type f -name '*.tipa' || echo "No .tipa files found"
 
     - name: Upload the app
       uses: wangyucode/sftp-upload-action@v1.4.8
