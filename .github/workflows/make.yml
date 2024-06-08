@@ -14,27 +14,27 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Build iPwnStrap
-      run:
+      run: 
         bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
         make package
 
     - name: List files in root directory
-      run:
+      run: 
         echo "Listing files in root directory"
         ls -al
 
     - name: List files in theos directory
-      run:
+      run: 
         echo "Listing files in .theos directory"
         ls -al .theos || echo ".theos directory does not exist"
 
     - name: List files in theos packages directory
-      run:
+      run: 
         echo "Listing files in .theos/packages directory"
         ls -al .theos/packages || echo ".theos/packages directory does not exist"
 
     - name: Find .tipa files in the workspace
-      run:
+      run: 
         echo "Searching for .tipa files in $GITHUB_WORKSPACE"
         find $GITHUB_WORKSPACE -type f -name '*.tipa' || echo "No .tipa files found"
 
