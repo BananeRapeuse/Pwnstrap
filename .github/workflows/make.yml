@@ -14,7 +14,8 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Build iPwnStrap 
-      run: bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
+      run: 
+           bash -c "$(curl -fsSL https://raw.githubusercontent.com/roothide/theos/master/bin/install-theos)"
            make package
 
     - name: List files for debugging
